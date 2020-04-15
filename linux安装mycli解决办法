@@ -1,0 +1,20 @@
+Mycli 是一个 MySQL 命令行客户端工具，具有自动完成和语法突出显示功能。
+它是由印度人基于python开发的一个工具，，适合初学者或对数据库熟悉但命令记不住的人群，能很好地克服记不住命令的困难。
+首先在linux上安装
+#yum install python-pip python-devel
+如果无法安装可以选择换源推荐这个源：
+#wget --no-check-certificate https://mirrors.tuna.tsinghua.edu.cn/epel//epel-release-latest-7.noarch.rpm -O /tmp/epel-release-latest-7.noarch.rpm
+换完后执行下面这个命令
+#yum localinstall -y /tmp/epel-release-latest-7.noarch.rpm
+安装python-pip
+#yum install -y python-pip
+最后安装mycli
+#pip install mycli
+这里有的人已经完成了，有的人会在这报以下错误：
+Cannot uninstall 'configobj'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
+解决办法是执行下面这条命令:
+#pip install --ignore-installed mycli
+再次执行：
+#pip install mycli
+到这里基本就完成了。
+感谢
